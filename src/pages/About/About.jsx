@@ -1,67 +1,61 @@
-import HeroImg from "@/assets/images/hero.jpg";
-import OlovaLogo from "@/assets/images/olova.png";
-
 export default function About() {
   return (
     <>
-      <section id="about" className="py-16 md:py-32  text-white bg-[#04081A]">
+      <section id="about" className="py-16 md:py-32 text-white bg-[#04081A]">
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl text-white">
-            Developer, Designer, Creator, Innovator
+            Developer, Learner, Builder, Problem Solver
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
             <div className="relative mb-6 sm:mb-0">
               <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl p-px from-zinc-300 to-transparent">
-                <img
-                  src={HeroImg}
-                  className="rounded-[15px] shadow block"
-                  alt="payments illustration"
-                  width={1207}
-                  height={929}
-                />
+                <div className="rounded-[15px] shadow block w-full h-full bg-gradient-to-br from-blue-500/20 via-teal-500/10 to-purple-500/20 flex items-center justify-center min-h-[250px]">
+                  <div className="text-center p-8">
+                    <span className="text-6xl mb-4 block">👨‍💻</span>
+                    <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                      Kavineswar S
+                    </p>
+                    <p className="text-gray-400 mt-2">Full Stack Developer</p>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div className="relative space-y-4">
               <p className="text-white">
-                Hello! I'm Nazmul Hossain, a passionate JavaScript developer
-                specializing in creating innovative web solutions and
-                user-friendly interfaces.{" "}
+                Hi! I&apos;m Kavineswar S, a passionate Computer Science
+                Engineering student at{" "}
                 <span className="font-bold text-white">
-                  As the creator of the OlovaJS UI Framework
+                  Bannari Amman Institute of Technology, Pollachi
                 </span>
-                , I'm dedicated to simplifying development workflows.
+                . I specialize in building scalable web applications using modern
+                technologies.
               </p>
               <p className="text-white">
-                My focus is on making web development faster, easier, and
-                accessible to all developers. Currently, I'm expanding into
-                backend development to grow as a full-stack developer and create
-                seamless, robust web applications.
+                My focus is on the MERN stack — MongoDB, Express.js, React, and
+                Node.js. I&apos;m actively learning cloud computing and system
+                design to prepare for software developer roles. I love turning
+                ideas into real, working products.
               </p>
 
               <div className="pt-6">
                 <blockquote className="border-l-4 border-gray-300 pl-4">
                   <p className="text-white">
-                    I'm a lifelong learner and innovator, driven by a desire to
-                    contribute to the developer community with new ideas and
-                    tools that deliver real value. As the creator of OlovaJS,
-                    I'm pushing the boundaries of JavaScript frameworks to
-                    empower developers worldwide.
+                    I believe in continuous learning and hands-on building. Every
+                    project I take on is a chance to grow my skills and solve
+                    real-world problems. I&apos;m actively seeking opportunities
+                    to contribute to impactful software projects.
                   </p>
 
                   <div className="mt-6 space-y-3">
                     <cite className="block font-medium text-white">
-                      Nazmul Hossain, Creator of
+                      Kavineswar S
                     </cite>
                     <div className="flex items-center gap-2">
-                      <img
-                        className="h-5 w-fit"
-                        src={OlovaLogo}
-                        alt="Olova Logo"
-                        height="20"
-                        width="auto"
-                      />
-                      <span className="text-white">OlovaJS</span>
+                      <span className="text-blue-400 text-lg">🎓</span>
+                      <span className="text-white">
+                        B.E CSE @ Bannari Amman Institute of Technology
+                      </span>
                     </div>
                   </div>
                 </blockquote>

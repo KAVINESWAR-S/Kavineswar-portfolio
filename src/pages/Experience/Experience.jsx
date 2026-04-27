@@ -1,5 +1,5 @@
 import React from "react";
-import { Code2, Activity, Cpu, Layers, Network, Binary } from "lucide-react";
+import { Code2, Layers, Network, Rocket, BookOpen, Wrench } from "lucide-react";
 
 const ExperienceCard = ({
   title,
@@ -54,28 +54,52 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   const experiences = [
     {
-      icon: Network,
-      title: "WordPress Developer",
-      company: "Fiverr",
-      period: "2019 - 2020",
+      icon: Code2,
+      title: "Full Stack Developer",
+      company: "Self-Driven Projects",
+      period: "2024 - Present",
       description:
-        "Worked on developing and customizing WordPress websites for clients globally.",
+        "Building multiple full-stack and frontend applications using MERN stack. Hands-on experience with React, Node.js, Express, and MongoDB.",
+    },
+    {
+      icon: Rocket,
+      title: "Smart Virtual Lab",
+      company: "Academic Project",
+      period: "2026",
+      description:
+        "Built a comprehensive virtual circuit simulation lab with real-time grading, teacher dashboards, student management, and PDF report generation.",
     },
     {
       icon: Layers,
-      title: "Junior Frontend Developer",
-      company: "Sera Programmer",
-      period: "2021 - 2023",
+      title: "Frontend Developer",
+      company: "Personal Projects",
+      period: "2023 - 2024",
       description:
-        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
+        "Started web development journey building responsive websites and UI clones. Developed an Instagram clone and various JavaScript applications.",
     },
     {
-      icon: Code2,
-      title: "JavaScript Developer",
-      company: "OlovJS (Sera Programmer)",
-      period: "2023 - Present",
+      icon: Network,
+      title: "DevOps Learner",
+      company: "Rampex Training",
+      period: "2025",
       description:
-        "Contributed to developing JavaScript libraries and enhancing framework functionalities.",
+        "Gained hands-on experience with Docker, Jenkins CI/CD pipelines, Linux administration, and GitHub integrations for automated deployments.",
+    },
+    {
+      icon: BookOpen,
+      title: "Cloud Computing",
+      company: "Self Learning",
+      period: "2025 - Present",
+      description:
+        "Actively learning AWS cloud services, system design fundamentals, and scalable architecture patterns for production applications.",
+    },
+    {
+      icon: Wrench,
+      title: "Problem Solving",
+      company: "Continuous Practice",
+      period: "Ongoing",
+      description:
+        "Regularly practicing data structures, algorithms, and problem-solving in Java and JavaScript to strengthen core CS fundamentals for placements.",
     },
   ];
 
@@ -109,12 +133,12 @@ const ExperienceSection = () => {
           <div className="flex flex-col items-center space-y-8 mb-20">
             <div className="relative">
               <h2 className="text-5xl md:text-7xl font-black text-transparent bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-center">
-                Professional Journey
+                My Journey
               </h2>
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl rounded-full" />
             </div>
             <p className="text-lg md:text-xl text-gray-400 font-medium tracking-wide text-center max-w-2xl">
-              "Transforming ideas into digital reality, one project at a time"
+              &quot;Building skills through projects, one line of code at a time&quot;
             </p>
           </div>
 

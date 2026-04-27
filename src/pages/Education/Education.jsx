@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import EducationLoader from "@/components/ui/EducationLoader";
 import {
   Star,
   Award,
@@ -15,24 +14,38 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
-      mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+      degree: "Bachelor of Engineering (B.E)",
+      field: "Computer Science and Engineering",
+      school: "Bannari Amman Institute of Technology",
+      mascot: "🎓",
+      year: "2023 – 2027 (Expected)",
+      achievements: ["CSE Department", "Full Stack Projects", "Active Learner"],
+      skills: [
+        "Data Structures",
+        "Algorithms",
+        "Web Development",
+        "Database Systems",
+        "Cloud Computing",
+        "System Design",
+      ],
       description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
+        "Pursuing B.E in Computer Science and Engineering with a focus on full stack web development, cloud technologies, and software engineering best practices.",
     },
     {
       degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
+      field: "Computer Science",
+      school: "vidya vikas international school karamadai",
       mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      year: "2021 – 2023",
+      achievements: ["Computer Science Stream", "Strong Academic Record"],
+      skills: [
+        "Mathematics",
+        "Physics",
+        "Computer Science",
+        "Programming Basics",
+      ],
       description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+        "Completed higher secondary education with Computer Science, building a strong foundation in programming and problem-solving that sparked my passion for software development.",
     },
   ];
 
@@ -78,8 +91,8 @@ const EducationSection = () => {
             Educational Journey
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Discover how academic excellence shapes innovative thinking and
-            professional growth.
+            Building a strong foundation in Computer Science to create impactful
+            software solutions.
           </p>
         </motion.div>
 
@@ -109,6 +122,9 @@ const EducationSection = () => {
                       {edu.degree}
                     </h3>
                   </div>
+                  <p className="text-lg text-teal-400 font-semibold">
+                    {edu.field}
+                  </p>
                   <p className="text-lg text-gray-300 flex items-center gap-2">
                     <BookOpen className="w-5 h-5 text-teal-500" />
                     {edu.school}
@@ -126,7 +142,7 @@ const EducationSection = () => {
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-white flex items-center gap-2">
                     <Trophy className="w-4 h-4 text-yellow-500" />
-                    Key Achievements
+                    Highlights
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {edu.achievements.map((achievement, i) => (

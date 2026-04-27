@@ -1,8 +1,20 @@
 {
-  "name": "react",
-  "private": true,
+  "name": "kavineswar-portfolio",
   "version": "0.0.0",
+  "private": true,
+  "description": "Personal portfolio website for Kavineswar S — Full Stack Developer & CSE Student",
+  "homepage": "https://kavineswar.vercel.app",
+  "bugs": {
+    "url": "https://github.com/KAVINESWAR-S/portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KAVINESWAR-S/portfolio.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -34,14 +46,14 @@
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.2",
-    "autoprefixer": "^10.4.21",
+    "autoprefixer": "^10.4.27",
     "eslint": "^9.34.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.12",
+    "postcss": "^8.5.9",
+    "tailwindcss": "^3.4.19",
     "vite": "^7.1.3"
   }
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Send, Phone, MapPin, Mail } from "lucide-react";
+import { Send, MapPin, Mail } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -53,14 +53,24 @@ export default function Contact() {
 
     // Create a new FormData object to send to Web3Forms API
     const form = new FormData();
-    form.append("access_key", "90f4b8af-e590-42b0-beaf-10b18f66a703"); // Replace with your Web3Forms access key
+    // TODO: Replace with your own Web3Forms access key from https://web3forms.com/
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || "";
+    
+    if (!accessKey) {
+      // Fallback: open mailto link
+      const mailtoLink = `mailto:kavineswars770@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`From: ${formData.name} (${formData.email})\n\n${formData.message}`)}`;
+      window.open(mailtoLink, "_blank");
+      setStatus("Opening your email client...");
+      return;
+    }
+
+    form.append("access_key", accessKey);
     form.append("name", formData.name);
     form.append("email", formData.email);
     form.append("subject", formData.subject || "New Contact Form Submission");
     form.append("message", formData.message);
 
     try {
-      // Send form data to Web3Forms API
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: form,
@@ -101,7 +111,7 @@ export default function Contact() {
                   Get in Touch
                 </h2>
                 <p className="text-gray-300 text-lg">
-                  Have a question or want to work together? Drop us a message!
+                  Have a question or want to collaborate? Drop me a message!
                 </p>
               </div>
 
@@ -112,7 +122,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-400">olovajs@gmail.com</p>
+                    <p className="text-gray-400">kavineswars770@gmail.com</p>
                   </div>
                 </div>
 
@@ -122,7 +132,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-400">Laxmipure, Natore 6400</p>
+                    <p className="text-gray-400">Pollachi, Tamil Nadu, India</p>
                   </div>
                 </div>
               </div>
@@ -220,7 +230,7 @@ export default function Contact() {
               {status && (
                 <div
                   className={`mt-4 text-center ${
-                    status.includes("success")
+                    status.includes("success") || status.includes("Opening")
                       ? "text-green-400"
                       : "text-red-400"
                   }`}
