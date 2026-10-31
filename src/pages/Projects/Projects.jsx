@@ -34,6 +34,15 @@ const projects = [
     githubLink: "https://github.com/KAVINESWAR-S/portfolio",
     liveLink: "#",
   },
+  {
+    title: "UCMS Protal",
+    description:
+      "UCMS (Unified Citizen Management System) is a digital governance portal that enables citizens to authenticate via Aadhaar OTP to apply for welfare schemes, submit grievances, and track civic service requests. It empowers Panchayat officers and administrators to efficiently verify applications, monitor village budgets, and manage local public works with end-to-end transparency",
+    link: "https://placehold.co/800x500/1e293b/60a5fa?text=UCMS+Portal",
+    color: "#5196fd",
+    githubLink: "https://github.com/KAVINESWAR-S/UCMS-Portal",
+    liveLink: "https://ucms-portal.vercel.app/",
+  }
 ];
 
 export default function Projects() {
